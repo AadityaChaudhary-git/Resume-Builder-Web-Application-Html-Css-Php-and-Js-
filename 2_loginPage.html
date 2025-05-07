@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Resume Builder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .signup-container {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      width: 350px;
+      text-align: center;
+    }
+    .signup-container h1 {
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    .form-control {
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+    .form-control label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .form-control input {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .signup-btn {
+      background: #6a11cb;
+      color: #fff;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%;
+    }
+    .signup-btn:hover {
+      background: #5a0bb8;
+    }
+    .login-link {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .login-link a {
+      color: #6a11cb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h1>Create an Account</h1>
+    <form id="signupForm">
+      <div class="form-control">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-control">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-control">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+      <div class="form-control">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+      </div>
+      <a href="2_ResumeBuilder.html">
+        <button class="signup-btn" type="submit">Sign Up</button>
+      </a>
+    </form>
+    <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+
+  <script>
+    // JavaScript for form submission and redirection
+    document.getElementById('signupForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the form from submitting traditionally
+
+      // Retrieve form values
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      // Basic validation
+      if (name === '' || email === '' || password === '' || confirmPassword === '') {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        alert('Passwords do not match.');
+        return;
+      }
+
+      // Success: Redirect to the Resume Builder page
+      alert('Sign-up successful! Redirecting...');
+      window.location.href = '2_ResumeBuilder.html';
+    });
+  </script>
+</body>
+</html>
