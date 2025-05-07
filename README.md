@@ -4,7 +4,7 @@
 This is a simple and responsive **Resume Builder Web Application** that allows users to sign up, log in, and create professional resumes. The application uses **PHP and MySQL** for backend operations, including storing user credentials, and **JavaScript** for dynamic form handling and resume generation.
 
 ![image alt](https://github.com/AadityaChaudhary-git/Resume-Builder-Web-Application-Html-Css-Php-and-Js-/blob/dfc24f42efa323a5eaeffc980c1ed888cb562e65/loginPage.png)
-
+![image alt](https://github.com/AadityaChaudhary-git/Resume-Builder-Web-Application-Html-Css-Php-and-Js-/blob/a3749d2f9192e190b0fa28eca759cac90a0f9e6b/Resume%20Output.png)
 ## 🔧 Technologies Used
 
 - **Frontend:** HTML, CSS, JavaScript
